@@ -1,43 +1,23 @@
 package fizzbuzz.kata;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzShould {
-    @Test
-    public void returnNumberEntered() {
-        var expected = "1";
+
+    @ParameterizedTest
+    @CsvSource({
+            "1, 1",
+            "3, Fizz",
+            "5, Buzz",
+            "15, FizzBuzz"
+    })
+    public void returnCorrectlyOutputBasedOnNumberEntered(int number, String expectedValue) {
         FizzBuzz fizzBuzz = new FizzBuzz();
-        var actual = fizzBuzz.print(1);
+        var actual = fizzBuzz.print(number);
 
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void returnFizzWhenNumberIs3() {
-        var expected = "Fizz";
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        var actual = fizzBuzz.print(3);
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void returnBuzzWhenNumberIs5() {
-        var expected = "Buzz";
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        var actual = fizzBuzz.print(5);
-
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void returnFizzBuzzWhenNumberIs15() {
-        var expected = "FizzBuzz";
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        var actual = fizzBuzz.print(15);
-
-        assertEquals(expected, actual);
+        assertEquals(expectedValue, actual);
     }
 }
