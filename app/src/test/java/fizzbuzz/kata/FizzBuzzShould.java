@@ -21,7 +21,7 @@ public class FizzBuzzShould {
             "30, FizzBuzz",
             "45, FizzBuzz"
     })
-    public void returnCorrectOutputBasedOnNumberEntered(int number, String expectedValue) {
+    public void returnCorrectValueWhenNumberIsBetWeenZeroAndOneHundred(int number, String expectedValue) {
         FizzBuzz fizzBuzz = new FizzBuzz();
         var actual = fizzBuzz.print(number);
 
