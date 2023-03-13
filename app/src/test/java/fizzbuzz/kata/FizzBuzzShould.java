@@ -19,7 +19,9 @@ public class FizzBuzzShould {
             "55, Buzz",
             "15, FizzBuzz",
             "30, FizzBuzz",
-            "45, FizzBuzz"
+            "45, FizzBuzz",
+            "500, Value out of limits",
+            "-500, Value out of limits"
     })
     public void returnCorrectValueWhenNumberIsBetWeenZeroAndOneHundred(int number, String expectedValue) {
         FizzBuzz fizzBuzz = new FizzBuzz();
