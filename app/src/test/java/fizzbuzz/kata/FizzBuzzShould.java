@@ -22,4 +22,13 @@ public class FizzBuzzShould {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void returnBuzzWhenNumberIs5() {
+        var expected = "Buzz";
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        var actual = fizzBuzz.print(5);
+
+        assertEquals(expected, actual);
+    }
 }
