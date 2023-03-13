@@ -10,11 +10,14 @@ public class FizzBuzzShould {
     @ParameterizedTest
     @CsvSource({
             "1, 1",
+            "98, 98",
             "3, Fizz",
+            "6, Fizz",
+            "63, Fizz",
             "5, Buzz",
             "15, FizzBuzz"
     })
-    public void returnCorrectlyOutputBasedOnNumberEntered(int number, String expectedValue) {
+    public void returnCorrectOutputBasedOnNumberEntered(int number, String expectedValue) {
         FizzBuzz fizzBuzz = new FizzBuzz();
         var actual = fizzBuzz.print(number);
 
