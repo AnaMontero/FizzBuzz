@@ -17,7 +17,9 @@ public class FizzBuzzShould {
             "5, Buzz",
             "10, Buzz",
             "55, Buzz",
-            "15, FizzBuzz"
+            "15, FizzBuzz",
+            "30, FizzBuzz",
+            "45, FizzBuzz"
     })
     public void returnCorrectOutputBasedOnNumberEntered(int number, String expectedValue) {
         FizzBuzz fizzBuzz = new FizzBuzz();
