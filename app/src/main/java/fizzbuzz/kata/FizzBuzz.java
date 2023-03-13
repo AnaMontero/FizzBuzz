@@ -2,16 +2,7 @@ package fizzbuzz.kata;
 
 public class FizzBuzz {
     public String print(int number) {
-        if(number % 15 == 0){
-            return "FizzBuzz";
-        }
-        else if(number % 3 == 0){
-            return "Fizz";
-        }
-        else if(number % 5 == 0){
-            return "Buzz";
-        }
 
-        return Integer.toString(number);
+        return CalculationHandler.calculateValueToReturn(number);
     }
 }
