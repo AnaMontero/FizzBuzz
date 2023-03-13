@@ -20,8 +20,6 @@ public class FizzBuzzShouldNot {
         assertNotEquals(expectedValue, actual);
     }
 
-
-
     @ParameterizedTest
     @CsvSource({
             "-1, -1",
