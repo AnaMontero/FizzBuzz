@@ -31,4 +31,13 @@ public class FizzBuzzShould {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void returnFizzBuzzWhenNumberIs15() {
+        var expected = "FizzBuzz";
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        var actual = fizzBuzz.print(15);
+
+        assertEquals(expected, actual);
+    }
 }
